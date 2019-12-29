@@ -13,7 +13,7 @@ tags:
   - huy
   - outsource
 ---
-**Lương:** $2000
+**Lương:** $1000 - $2000
 
 **Công nghệ:** Golang, ReactJS
 

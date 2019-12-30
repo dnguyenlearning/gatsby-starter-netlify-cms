@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Dwarves Foundation - Team Secret (Dota 2) của thị trường outsource Việt
-aliases: dwarves-foundation-team-secret-outsource-viet
+aliases: /blog/dwarves-foundation-team-secret-outsource-viet
 date: 2019-12-29T06:12:57.634Z
 description: >-
   Biết đến Dwarves qua những dự án open source của họ, tôi tò mò và quyết định

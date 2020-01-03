@@ -5,12 +5,14 @@
   "author": "Austin Green",
   "dependencies": {
     "airtable": "^0.8.1",
+    "autoprefixer": "^9.7.3",
     "bulma": "^0.8.0",
     "gatsby": "^2.13.31",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-netlify": "^2.0.6",
     "gatsby-plugin-netlify-cms": "^4.1.33",
+    "gatsby-plugin-postcss": "^2.1.18",
     "gatsby-plugin-purgecss": "^4.0.0",
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-sass": "^2.0.7",
@@ -37,6 +39,7 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "tailwindcss": "^1.1.4",
     "uuid": "^3.2.1"
   },
   "keywords": [
@@ -45,8 +48,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "build:style": "npx tailwind build src/styles/index.css -o src/styles/tailwind.css",
     "clean": "gatsby clean",
-    "start": "npm run develop",
+    "start": "yarn build:style && npm run develop",
     "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",

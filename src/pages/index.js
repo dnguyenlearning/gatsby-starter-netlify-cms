@@ -6,7 +6,12 @@ import RightMainSection from "../MainPage/RightSection";
 
 const IndexPage = () => {
   return <Layout>
-    <SEO title="Home" />
+    <SEO 
+      title="Congty Tech" 
+      description="company review"
+      lang="vn"
+      
+    />
     <main className="px-4 lg:p-0 max-w-5xl mx-auto flex flex-col lg:flex-row mt-12">
       <div className="lg:w-8/12 order-2 lg:order-1 w-full">
           <LeftMainSection />

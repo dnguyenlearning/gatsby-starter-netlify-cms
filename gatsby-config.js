@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Công Ty Tech',
+    title: 'Company Review',
     author: 'Duong Nguyen & Tri Do',
-    description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+    description: 'Tất cả thông tin về công ty tech tại Việt Nam',
+    keywords: 'company review, IT, Review, Companies, company tuyển dụng, Nodejs, Reactjs',
+    twitterSite: "@DNlearning",
+    twitterCreator: "@DNlearning",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -72,7 +74,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
         enableIdentityWidget: true,
         publicPath: `admin`,
-        htmlTitle: `Cong Tech Post Manager`,
+        htmlTitle: `Cong Ty Tech Post Manager`,
         includeRobots: true,
       },
     },
@@ -93,6 +95,18 @@ module.exports = {
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Congty Tech`,
+        short_name: `company_tech`,
+        start_url: `/`,
+        background_color: `#f56565`,
+        theme_color: `#683369`,
+        display: `standalone`,
+        icon: `src/img/tech.png`
+      }
+    },
+    'gatsby-plugin-netlify', // make sure to keep it last in the array,
   ],
 }

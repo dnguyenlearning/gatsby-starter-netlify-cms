@@ -12,6 +12,9 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            twitterSite
+            twitterCreator
+            keywords
           }
         }
       }
@@ -19,6 +22,10 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaKeywords = site.siteMetadata.keywords;
+  const author = site.siteMetadata.keywords || "Duong Nguyen";
+  const twitterCreator = site.siteMetadata.twitterCreator || "@DNlearning";
+  const twitterSite = site.siteMetadata.twitterSite || "@DNlearning";
 
   return (
     <Helmet
@@ -31,6 +38,14 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `keywords`,
+          content: metaKeywords,
+        },
+        {
+          name: `author`,
+          content: author,
         },
         {
           property: `og:title`,
@@ -50,7 +65,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: twitterCreator,
+        },
+        {
+          name: `twitter:site`,
+          content: twitterSite,
         },
         {
           name: `twitter:title`,

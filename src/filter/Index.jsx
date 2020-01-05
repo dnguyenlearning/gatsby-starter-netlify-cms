@@ -22,7 +22,7 @@ function Filter() {
             return <span
                 key={filter.id}
                 onClick={() => { active ? removeFilter(filter.id) : addFilter(filter) }}
-                className={`${active ? `bg-gray-500` : ``} flex-shrink-0 hover:bg-gray-500 m-1 cursor-pointer flex rounded bg-gray-200 text-black capitalize px-2 py-1 text-xs mr-3`}
+                className={`${active ? `bg-gray-500` : ``} flex-shrink-0 m-1 cursor-pointer flex rounded bg-gray-200 text-black capitalize px-2 py-1 text-xs mr-3`}
             >
                 {filter.icon} {filter.field}
             </span>

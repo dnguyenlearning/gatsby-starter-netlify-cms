@@ -17,10 +17,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div style={{
+      background: "#f3f3f3",
+      minHeight: "100vh",
+    }}>
       <Header siteTitle={data.site.siteMetadata.title} />
       {children}
-    </>
+    </div>
   )
 }
 

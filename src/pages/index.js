@@ -1,17 +1,19 @@
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Companies from "../components/Companies";
-import Filter from "../filter/Index";
+import LeftMainSection from "../MainPage/LeftSection";
+import RightMainSection from "../MainPage/RightSection";
 
 const IndexPage = () => {
   return <Layout>
     <SEO title="Home" />
-    <main className="max-w-full sm:max-w-2xl mx-auto mt-5 md:max-w-4xl lg:max-w-sl">
-      <div className="my-8">
-        <Filter />
+    <main className="px-4 lg:p-0 max-w-5xl mx-auto flex flex-col lg:flex-row mt-12">
+      <div className="lg:w-8/12 order-2 lg:order-1 w-full">
+          <LeftMainSection />
       </div>
-      <Companies />
+      <div className="lg:w-4/12 ml-0 lg:ml-8 order-1 lg:order-2 w-full">
+          <RightMainSection />
+      </div>
     </main>
   </Layout>
 }

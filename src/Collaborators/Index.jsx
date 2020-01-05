@@ -1,4 +1,4 @@
-import React from "React";
+import React from "react";
 import TriImage from "../img/tri.jpg";
 import DuongImage from "../img/duong.jpg";
 

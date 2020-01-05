@@ -1,5 +1,5 @@
 import React from "react";
-import Companies  from "../companies";
+import Companies  from "../companies/Index";
 import {useSelector, useDispatch} from "react-redux";
 import * as companyActions from "../companies/action";
 import {HashLoader} from "react-spinners";

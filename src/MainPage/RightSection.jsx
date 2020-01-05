@@ -1,7 +1,7 @@
 import React from "react";
 import Filter from "../filter/Index";
-import Collaborators from "../Collaborators";
-import Advertiser from "../Advertiser";
+import Collaborators from "../Collaborators/Index";
+import Advertiser from "../Advertiser/Index";
 function LeftSection(){
     return <div className="flex-col">
         <div className="mb-5">

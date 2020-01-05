@@ -17,7 +17,7 @@ function Companies({companyList=[], isFetching}) {
                 </div>
                 <div className="flex items-center justify-center flex-shrink-0 flex-col w-10 ml-5">
                     <div className="bg-gray-100 flex flex-col justify-center items-center px-3 py-1 rounded">
-                        <div className="text-xl">👍</div>
+                        <div className="text-xl"><span role="img" aria-label="like">👍</span></div>
                         <div className="text-sm text-gray-700">{company.like_numbers || 0}</div>
                     </div>
                 </div>

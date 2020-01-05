@@ -12,7 +12,7 @@ function RightSection(){
 
     React.useEffect(() => {
         dispatch(companyActions.fetchCompaniesWithFilter({filters: userFilters}))
-    }, [userFilters])
+    }, [userFilters, dispatch])
 
     React.useEffect(() => {
         dispatch(companyActions.fetchCompanies());

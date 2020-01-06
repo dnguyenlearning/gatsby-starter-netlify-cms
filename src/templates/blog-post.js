@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import Content, { HTMLContent } from '../components/Content';
+import LeftBlogSection from "../Blog/LeftSection";
+import RightBlogSection from "../Blog/RightSection";
 
 export const BlogPostTemplate = ({
   content,
@@ -19,29 +20,26 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      <main className="px-4 lg:p-0 max-w-5xl mx-auto flex flex-col lg:flex-row mt-12">
+        <div className="lg:w-8/12 order-2 lg:order-1 w-full">
+            <LeftBlogSection 
+                PostContent={PostContent}
+                content={content}
+                description={description}
+                tags={tags}
+                title={title}
+            />
         </div>
-      </div>
+        <div className="lg:w-4/12 ml-0 lg:ml-8 order-1 lg:order-2 w-full">
+            <RightBlogSection 
+              author={{
+                name: "Tri Do",
+                facebook_url: ""
+              }}
+              rating={4}
+            />
+        </div>
+    </main>
     </section>
   )
 }

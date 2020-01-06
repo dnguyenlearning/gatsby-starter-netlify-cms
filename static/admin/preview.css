@@ -1,39 +1,39 @@
-.container.content{
-    margin: 10px auto;
-    padding: 20px;
-    
+#blog_content{
+    padding: 3px 20px 20px;
+    color: #6f6f6f;
+    font-size: 1rem;
 }
 
-.container.content h1{
-    font-size: 2em;
-    margin: 0.67em 0;
+#blog_content h1{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1rem 0;
 }
 
-.container.content p{
-    margin: 8px 0;
+#blog_content p{
+    margin: 20px 0 5px;
 }
-.container.content ul,ol{
+#blog_content ul,ol{
     margin: 20px;
-    
 }
 
-.container.content ul,ol li{
+#blog_content ul,ol li{
     min-height: 30px;
     list-style: inside;
 }
 
-.container.content blockquote{
+#blog_content blockquote{
     margin: 20px 0;
     padding-left: 20px;
-    border-left: 5px solid royalblue;
+    border-left: 5px solid #f56565;
     font-style: italic;
     opacity: 0.7;
 }
-.container.content ul.taglist{
+#blog_content ul.taglist{
     display: flex;
 }
 
-.container.content ul.taglist li{
+#blog_content ul.taglist li{
     list-style: none;
     padding: 3px 8px;
     background: rgba(99,99,99,0.4);

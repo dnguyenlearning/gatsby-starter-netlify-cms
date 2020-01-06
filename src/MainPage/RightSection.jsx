@@ -1,8 +1,8 @@
 import React from "react";
-import Filter from "../filter/index";
-import Collaborators from "../Collaborators/index";
-import Advertiser from "../Advertiser/index";
-import CopyRight from "../CopyRight/index";
+import Filter from "../filter/Index";
+import Collaborators from "../Collaborators/Index";
+import Advertiser from "../Advertiser/Index";
+import CopyRight from "../CopyRight/Index";
 
 function RightSection(){
     return <div className="flex-col">

@@ -1,8 +1,8 @@
 import React from "react";
-import Author from "../Author/index";
+import Author from "../Author/Index";
 import Rating from "../components/Rating";
-import Advertiser from "../Advertiser/index";
-import CopyRight from "../CopyRight/index";
+import Advertiser from "../Advertiser/Index";
+import CopyRight from "../CopyRight/Index";
 
 function LeftSection(){
     return <div className="flex-col">

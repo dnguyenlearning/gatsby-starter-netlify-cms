@@ -1,19 +1,21 @@
 import React from "react";
-import Author from "../Author/Index";
-import Rating from "../components/Rating";
-import Advertiser from "../Advertiser/Index";
-import CopyRight from "../CopyRight/Index";
+import Filter from "../filter";
+import Collaborators from "../Collaborators";
+import Advertiser from "../Advertiser";
+import CopyRight from "../CopyRight";
 
-function LeftSection(){
+function RightSection(){
     return <div className="flex-col">
         <div className="mb-5">
+            <div className="font-semibold mb-2 text-gray-600">Choose to filter</div>
             <div className="rounded bg-white p-3 shadow-tech">
-                <Author />
+                <Filter />
             </div>
         </div>
-        <div className="mb-5">
+        <div className="hidden mb-5 lg:block">
+            <div className="font-semibold mb-2 text-gray-600">Collaborators</div>
             <div className="rounded bg-white p-3 shadow-tech">
-                <Rating />
+                <Collaborators />
             </div>
         </div>
         <div className="mb-5 hidden lg:block">
@@ -27,4 +29,4 @@ function LeftSection(){
     </div>
 }
 
-export default React.memo(LeftSection);
+export default React.memo(RightSection);
